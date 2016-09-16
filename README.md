@@ -13,7 +13,7 @@ ScreenDoctor aims to use existing GUI tests with minor extensions to generate sc
 
 Let's say we want to generate a screenshot like the following:
 
-<a href="https://commons.wikimedia.org/wiki/File%3AHuggle_3_-_Screenshot_(numbred).png"><img width="512" alt="Huggle 3 - Screenshot (numbred)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Huggle_3_-_Screenshot_%28numbred%29.png/512px-Huggle_3_-_Screenshot_%28numbred%29.png"/></a>
+<a href="https://commons.wikimedia.org/wiki/File%3AHuggle_3_-_Screenshot_(numbred).png"><img width="512" alt="Huggle 3 - Screenshot (numbred)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Huggle_3_-_Screenshot_%28numbred%29.png/512px-Huggle_3_-_Screenshot_%28numbred%29.png"/></a><br/>
 (Uploaded by Josve05a (Huggle software) [LGPL (http://www.gnu.org/licenses/lgpl.html), GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons)
 
 The underlying picture may be part of our software we are testing/developing.
