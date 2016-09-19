@@ -71,3 +71,15 @@ The GUI test tool should take the configuration file as specified above and prod
     7. the pixel coordinates of the measured area as left,top,right,bottom in pixels without units
     8. the split string
     7. the label text from the config file
+
+### Highlighting formats
+Highlighings are specified by one of the following string values.
+
+1. Circle
+2. Square
+3. Diamond
+4. CircleWithLine
+5. SquareWithLine
+6. DiamondWithLine
+3. PureText
+
