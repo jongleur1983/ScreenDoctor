@@ -37,3 +37,37 @@ The planned process should be
 - from the configuration file take what kind of augmentation should be used (borders, numeric markers, text with a line aiming to the position, ...), how it should be used (color, font, ...) and what's the content (text/number of the marker etc)
 - from the log file take where these augmentations have to be added
 - manipulate the screenshot accordingly and save it (preferred as another file).
+
+## Format Specification
+
+### Configuration file (to be read by the GUI test tool)
+
+A single screenshot is defined in one single file.
+The file is a text file X.txt.
+
+1. The first line must contain the target file name without an extension.
+2. The second line must be a way that allows the GUI test tool to identify the necessary screenshot target area. How this is defined may be different for different test tools and UI technology.
+3. The third line must not be empty and defines the delimiting string for the augmentation requests (may be a single character or more, but must not be part of the output)
+3. The third line is an empty line
+4. Starting at this line every line requests an augmentation request in the following format
+    2. a name to identify this request in the output file
+    3. the split string
+    2. an identification for the area to be measured, dependent on the UI test tool used.
+    3. the split string
+    3. type of highlight to be created by ScreenDoctor later (for allowed values see below)
+    4. the split string
+    3. a label text to be used within the label
+
+### Metadata file (to be written by the GUI test tool and read by ScreenDoctor)
+
+The GUI test tool should take the configuration file as specified above and produce the following output
+
+1. An image file with the name specified in line 1 of the configuration file, followed by the extension .png
+2. A measurement file with one line per augmentation request from the configuration file. Each line is a list of values delimited by the same delimiting character specified in the configuration file (see above). The lines have the following format:
+    3. the identifying name from the config file
+    4. the split string
+    5. the highlight type from the config file
+    6. the split string
+    7. the pixel coordinates of the measured area as left,top,right,bottom in pixels without units
+    8. the split string
+    7. the label text from the config file
